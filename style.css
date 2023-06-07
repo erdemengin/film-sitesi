@@ -197,12 +197,15 @@ body{
 }
 .movie-item{
     position: relative;
+    width: 100%;
+    cursor: pointer;
 }
 .movie-item-img{
-    width: 270px;    
+    width: 100%;    
     height: 200px;
     object-fit: cover;
     transition: 1s all ease;
+    z-index: 1;
 }
 .movie-item-title{
     background-color: rgba(40, 40, 40, 0.4);
@@ -214,6 +217,7 @@ body{
     left: 50px;
     opacity: 0;
     transition: 1s all ease;
+    z-index: 2;
 }
 .movie-item-buttons{
     background-color: rgba(40, 40, 40, 0.4);
@@ -227,13 +231,15 @@ body{
     opacity: 0;
 }
 .movie-item:hover .movie-item-title, .movie-item-buttons{
+    position: absolute;
     opacity: 1;
+    z-index: 2;
 }
 .movie-item:hover .movie-item-img{
     transform: scale(1.2);
-    margin: 0 30px;
     transition: 1s all ease;
-    opacity: .5;
+    opacity: 1;
+    z-index: 2;
 }
 .movie-item-buttons i{
     cursor: pointer;
@@ -259,5 +265,190 @@ body{
     opacity: 1;
     transition: 0.5s all ease;
 }
-
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+  }
+  
+  .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0
+  }
+  .Content{
+      margin: 0 50px;
+      width: 100%;
+  }
+  .slick-list:focus {
+    outline: none
+  }
+  
+  .slick-list.dragging {
+    cursor: hand
+  }
+  
+  .slick-slider .slick-track,
+  .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+  
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block
+  }
+  
+  .slick-track:before,
+  .slick-track:after {
+    display: table;
+    content: ''
+  }
+  
+  .slick-track:after {
+    clear: both
+  }
+  
+  .slick-loading .slick-track {
+    visibility: hidden
+  }
+  
+  .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+  }
+  
+  .slick-slide.dragging img {
+    pointer-events: none
+  }
+  
+  .slick-initialized .slick-slide {
+    display: block
+  }
+  
+  .slick-loading .slick-slide {
+    visibility: hidden
+  }
+  
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+  }
+  
+  .img-fill {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center
+  }
+  
+  .img-fill img {
+    height: 100%;
+    min-width: 100%;
+    position: relative;
+    display: inline-block;
+    max-width: none
+  }
+  /* Slider Theme Style */
+  
+  .Container {
+      overflow: hidden;
+      position: relative;
+      width: calc(100% - 60px);
+      margin-left: 60px;
+  }
+  
+  .Container:after,
+  .Container .Head:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .Container .Head {
+      font: 20px/50px NeoSansR;
+      color: #222;
+      height: 52px;
+      overflow: hidden;
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 3;
+  }
+  
+  .Container .Head .Arrows {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .Container .Head .Slick-Next,
+  .Container .Head .Slick-Prev {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: #2b2b2b;
+    color: #FFF;
+    cursor: pointer;
+    font: 18px/36px FontAwesome;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  
+  .Container .Head .Slick-Next:hover,
+  .Container .Head .Slick-Prev:hover {
+    background: #33687a;
+  }
+  
+  .Container .Head .Slick-Next:before {
+    content: '\f105'
+  }
+  
+  .Container .Head .Slick-Prev:before {
+    content: '\f104'
+  }
+  
+  .SlickCarousel {
+    margin: 0 -7.5px;
+    margin-top: 10px;
+  }
+  
+  .ProductBlock {
+    padding: 0 7.5px;
+   
+  }
+  
+  .ProductBlock .img-fill {
+    height: 200px;
+  }
+  
+  .ProductBlock h3 {
+    font: 15px/36px RalewayR;
+    color: #393939;
+    margin-top: 5px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .25);
+  }
+  li{
+    list-style: none;
+  }
 /*! movie list end  */
