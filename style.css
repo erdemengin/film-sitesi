@@ -3,19 +3,23 @@
 *{
     margin: 0;
 }
+:root{
+    --black: #000;
+    --white: #fff;
+}
 body{
     font-family: 'Electrolize', sans-serif;
-    color: white;
+    color: var(--white);
 }
 .container{
-    background-color: black;
+    background-color: var(--black);
 }
 /*! base css end */
 /*! navbar start  */
 .navbar{
-    background-color: black;
+    background-color: var(--black);
     height: 60px;
-    color: white;
+    color: var(--white);
     position: sticky;
     top: 0;
     z-index: 1;
@@ -55,7 +59,7 @@ body{
 .toggle{
     width: 40px;
     height: 20px;
-    background-color: white;
+    background-color: var(--white);
     position: relative;
     border-radius: 30px;
     display: flex;
@@ -69,11 +73,14 @@ body{
 .toggle-ball{
     width: 18px;
     height: 18px;
-    background-color: black;
+    background-color: var(--black);
     border-radius: 50%;
     cursor:pointer;
     position: absolute;
     right: 1px;
+}
+.toggle-ball-sun{
+    left: 1px !important;
 }
 .menu-list-item:hover{
     font-weight: bold;
@@ -91,8 +98,8 @@ body{
 
 /*! sidebar start  */
 .sidebar{
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     height: 100%;
     width: 60px;
     display: flex;
@@ -128,7 +135,7 @@ body{
     background-color: rgba(255, 255, 255, 0.5);
     padding: 10px;
     margin: 30px;
-    color: black;
+    color: var(--black);
 }
 .featured-buttons{
     display: flex;
@@ -148,7 +155,7 @@ body{
 }
 .info-button{
     background-color: rgb(145, 142, 142, 0.5);
-    color: white;
+    color: var(--white);
 }
 /*! featured content end  */
 
@@ -158,8 +165,8 @@ body{
     padding: 20px;
 }
 .movie-list-filter select{
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
     padding: 8px 0;
     width: 125px;
     cursor: pointer;
@@ -171,7 +178,7 @@ body{
     margin-left: 70px;
 }
 .movie-list-title{
-    color: white;
+    color: var(--white);
 }
 .movie-list{
     list-style: none;
