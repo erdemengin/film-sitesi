@@ -57,4 +57,12 @@ $(document).ready(function(){
         }},
       ],
     })
-  })
+  });
+
+
+let mobileToggle = document.getElementById("mobile-toggle");
+let navbarContent = document.querySelector(".navbar-content");
+
+mobileToggle.addEventListener("click",function(){
+  navbarContent.classList.toggle("open-navbar");
+});
